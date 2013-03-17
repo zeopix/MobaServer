@@ -1,0 +1,53 @@
+<?php
+
+namespace Core\DataBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Links
+ *
+ * @ORM\Table(name="links")
+ * @ORM\Entity
+ */
+class Links
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="href", type="string", length=255, nullable=false)
+     */
+    private $href;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text", type="string", length=255, nullable=false)
+     */
+    private $text;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="level", type="integer", nullable=false)
+     */
+    private $level;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=false)
+     */
+    private $status;
+
+
+}

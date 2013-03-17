@@ -1,0 +1,151 @@
+<?php
+
+namespace Core\DataBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Hero
+ *
+ * @ORM\Table(name="hero")
+ * @ORM\Entity
+ */
+class Hero
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=false)
+     */
+    private $link;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="crawled", type="boolean", nullable=false)
+     */
+    private $crawled;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tags", type="string", length=255, nullable=true)
+     */
+    private $tags;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="riot_points", type="integer", nullable=true)
+     */
+    private $riotPoints;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="influence_points", type="integer", nullable=true)
+     */
+    private $influencePoints;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="health", type="float", nullable=true)
+     */
+    private $health;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="mana", type="float", nullable=true)
+     */
+    private $mana;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="speed", type="float", nullable=true)
+     */
+    private $speed;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="armor", type="float", nullable=true)
+     */
+    private $armor;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="resist", type="float", nullable=true)
+     */
+    private $resist;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="critical", type="float", nullable=true)
+     */
+    private $critical;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="health_regen", type="float", nullable=true)
+     */
+    private $healthRegen;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="mana_regen", type="float", nullable=true)
+     */
+    private $manaRegen;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="attack_range", type="float", nullable=true)
+     */
+    private $attackRange;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     */
+    private $title;
+
+
+}

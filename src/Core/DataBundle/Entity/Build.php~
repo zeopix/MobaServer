@@ -1,0 +1,112 @@
+<?php
+
+namespace Core\DataBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Build
+ *
+ * @ORM\Table(name="build")
+ * @ORM\Entity
+ */
+class Build
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="runes", type="array", nullable=true)
+     */
+    private $runes;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="bags", type="array", nullable=true)
+     */
+    private $bags;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="spells", type="array", nullable=true)
+     */
+    private $spells;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="abilities", type="array", nullable=true)
+     */
+    private $abilities;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="mastery", type="array", nullable=true)
+     */
+    private $mastery;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="stats", type="array", nullable=true)
+     */
+    private $stats;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=false)
+     */
+    private $status;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="crawled", type="boolean", nullable=false)
+     */
+    private $crawled;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="crawled_at", type="datetime", nullable=false)
+     */
+    private $crawledAt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+    private $link;
+
+    /**
+     * @var \Hero
+     *
+     * @ORM\ManyToOne(targetEntity="Hero")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="hero_id", referencedColumnName="id")
+     * })
+     */
+    private $hero;
+
+
+}

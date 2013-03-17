@@ -1,0 +1,5 @@
+core_api:
+    resource: "@CoreApiBundle/Controller/"
+    type:     annotation
+    prefix:   /api
+
